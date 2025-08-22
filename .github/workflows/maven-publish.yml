@@ -29,15 +29,15 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build with Maven
-      run: mvn compile my-java-maven-app/pom.xml
+      run: mvn -f my-java-maven-app/pom.xml compile
 
     - name: review project
-      run: mvn pmd:pmd my-java-maven-app/pom.xml
+      run: mvn -f my-java-maven-app/pom.xml pmd:pmd
 
     - name: Run tests
-      run: mvn test my-java-maven-app/pom.xml
+      run: mvn -f my-java-maven-app/pom.xml test
 
     - name: Build package
-      run: mvn package my-java-maven-app/pom.xml 
+      run: mvn -f my-java-maven-app/pom.xml package
 
     
