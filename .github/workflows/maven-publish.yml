@@ -31,7 +31,6 @@ jobs:
     - name: Build with Maven
       run: mvn compile
 
-  
     - name: review project
       run: mvn pmd:pmd
 
